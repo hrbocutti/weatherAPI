@@ -30,6 +30,7 @@ app.post('/', function (req, res) {
 
 });
 
-app.listen(3000, function () {
-    console.log('Server Start !!! ' + '\nhttp://localhost:3000/')
+let port = process.env.PORT || 3000;
+app.listen(port, function () {
+    console.log('Server Start !!!')
 });
