@@ -13,10 +13,12 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) =>{
    res.render('index', {weather: 'CHAMADA GET', error: null})
+    console.log("GET");
 });
 
 app.post('/', (req, res) =>{
     res.render('index', {weather: 'POST', error: null})
+    console.log("POST");
 });
 
 /*app.get('/', function( req, res){
