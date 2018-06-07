@@ -11,17 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) =>{
-   res.render('index', {weather: 'CHAMADA GET', error: null})
-    console.log("GET");
-});
-
-app.post('/', (req, res) =>{
-    res.render('index', {weather: 'POST', error: null})
-    console.log("POST");
-});
-
-/*app.get('/', function( req, res){
+app.get('/', function( req, res){
     res.render('index', {weather: null, error: null});
 });
 
@@ -38,7 +28,7 @@ app.post('/', function (req, res) {
         res.render('index', {weather: weatherText, error: null});
     });
 
-});*/
+});
 
 let port = process.env.PORT || 3000;
 app.listen(port, function () {
